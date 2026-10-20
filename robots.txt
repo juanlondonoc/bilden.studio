@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://bilden.studio/sitemap.xml
