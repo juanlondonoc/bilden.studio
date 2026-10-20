@@ -1,10 +1,103 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CO">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bilden Studio — Arquitectura</title>
-<meta name="description" content="Bilden Studio. Estudio de arquitectura. Diseñamos pensando en el futuro.">
+<title>Bilden Studio | Arquitectura, diseño y construcción en Bogotá</title>
+<meta name="description" content="Estudio de arquitectura en Bogotá. Diseño y construcción de oficinas corporativas, espacios de salud y vivienda, con control de tiempos, costos y calidad. Cotiza tu proyecto.">
+<link rel="canonical" href="https://bilden.studio/">
+<meta name="theme-color" content="#55574A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Bilden Studio">
+<meta property="og:title" content="Bilden Studio | Arquitectura, diseño y construcción en Bogotá">
+<meta property="og:description" content="Diseño y construcción de oficinas, espacios de salud y vivienda en Bogotá.">
+<meta property="og:url" content="https://bilden.studio/">
+<meta property="og:image" content="https://bilden.studio/img/og-bilden-studio.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="img/proyectos/jenesano-01-1600.webp" imagesrcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "@id": "https://bilden.studio/#estudio",
+ "name": "Bilden Studio",
+ "alternateName": "bilden.studio",
+ "description": "Estudio de arquitectura en Bogotá dedicado al diseño arquitectónico y la construcción de oficinas corporativas, espacios de salud y vivienda.",
+ "url": "https://bilden.studio/",
+ "image": "https://bilden.studio/img/og-bilden-studio.jpg",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Bogotá",
+  "addressRegion": "Bogotá D.C.",
+  "addressCountry": "CO"
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Bogotá"
+  },
+  {
+   "@type": "AdministrativeArea",
+   "name": "Cundinamarca"
+  },
+  {
+   "@type": "AdministrativeArea",
+   "name": "Boyacá"
+  }
+ ],
+ "knowsAbout": [
+  "Diseño arquitectónico",
+  "Construcción",
+  "Diseño y remodelación de oficinas",
+  "Adecuación de espacios de salud",
+  "Diseño de casas campestres"
+ ],
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Servicios",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Diseño arquitectónico"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Construcción y dirección de obra"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Diseño y remodelación de oficinas"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Adecuación de espacios de salud"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Vivienda y casas campestres"
+    }
+   }
+  ]
+ }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
@@ -29,7 +122,7 @@
     font-family:"Archivo",system-ui,sans-serif;font-weight:400;
     font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
   }
-  img{display:block;max-width:100%}
+  img{display:block;max-width:100%;height:auto}
   figure{margin:0}
   a{color:inherit;text-decoration:none}
   .wrap{width:var(--wrap);margin-inline:auto}
@@ -93,7 +186,8 @@
   @keyframes heroIn{to{transform:scale(1)}}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(30,32,26,.55) 0%,rgba(30,32,26,.18) 45%,rgba(30,32,26,0) 70%),linear-gradient(0deg,rgba(30,32,26,.35),transparent 35%),linear-gradient(180deg,rgba(30,32,26,.35),transparent 22%)}
   .hero .wrap{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:space-between;gap:40px}
-  .hero h1{font-size:clamp(42px,6vw,88px);max-width:11ch;margin:18px 0 40px}
+  .hero h1{margin:0}
+  .hero .hero-title{font-size:clamp(42px,6vw,88px);max-width:11ch;margin:18px 0 40px}
   .hero .link-arrow{color:var(--white)}
   .petals{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,22px);width:clamp(150px,15vw,210px);flex:none}
   .petals span{aspect-ratio:1;background:rgba(239,239,239,.92);border-radius:0 0 0 100%;opacity:0;transform:translateY(10px);animation:petal .9s var(--ease) forwards}
@@ -137,6 +231,13 @@
   .gallery figure{margin:0;overflow:hidden;background:var(--paper-2)}
   .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s var(--ease)}
   .gallery figure:hover img{transform:scale(1.04)}
+
+  .services{list-style:none;margin:clamp(56px,6vw,90px) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--rule)}
+  .services li{padding:26px 24px 0 0;border-right:1px solid rgba(85,87,74,.25);margin-right:24px}
+  .services li:last-child{border-right:0;margin-right:0}
+  .services .n{font-size:12px;font-weight:600;letter-spacing:.14em;opacity:.55}
+  .services h3{margin:18px 0 12px;font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.2;font-variation-settings:"wdth" 110}
+  .services p{margin:0;font-size:14.5px;line-height:1.6;opacity:.8}
 
   .project{margin-top:clamp(120px,13vw,190px)}
   .index{list-style:none;margin:0;padding:0;border-top:2px solid var(--rule)}
@@ -261,6 +362,8 @@
     .nav.open ul{display:flex;flex-direction:column;align-items:flex-start;gap:26px;position:absolute;top:84px;left:0;right:0;background:var(--paper);padding:30px 24px 40px;border-bottom:1px solid rgba(85,87,74,.18)}
     .split,.facts,.contact{grid-template-columns:1fr;gap:40px}
     .split > :last-child{justify-self:start}
+    .services{grid-template-columns:1fr 1fr;row-gap:40px}
+    .services li{border-right:0;margin-right:0}
     .index a{grid-template-columns:44px 1fr 24px}
     .index .c,.index .m{display:none}
     .mosaic,.mosaic.flip,.text-cols,.pp-grid{grid-template-columns:1fr}
@@ -284,6 +387,7 @@
     .feature-stats .stat b{font-size:46px}
     .facts dl{grid-template-columns:1fr 1fr}
     .gallery{grid-template-columns:1fr 1fr}
+    .services{grid-template-columns:1fr}
     .gallery figure:nth-child(3){display:none}
     .compare{grid-template-columns:1fr}
     .bleed{height:80svh}
@@ -327,6 +431,7 @@
     </a>
     <nav aria-label="Principal">
       <ul id="menu">
+        <li><a href="#servicios">Servicios</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#bilden">Sobre Bilden</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -341,11 +446,11 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="inicio">
-  <img src="img/proyectos/jenesano-01.jpg" alt="Casa Jenesano, proyecto de Bilden Studio en Boyacá">
+  <img src="img/proyectos/jenesano-01-1600.webp" srcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-01-1600.webp" alt="Casa Jenesano, casa campestre diseñada y construida por Bilden Studio" fetchpriority="high">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Bilden Studio — 2024</p>
-      <h1 class="h-display">Diseñamos pensando en el futuro</h1>
+      <h1 class="eyebrow">Arquitectura, diseño y construcción en Bogotá</h1>
+      <p class="h-display hero-title">Diseñamos pensando en el futuro</p>
       <a href="#bilden" class="link-arrow">Ver más <svg class="arrow"><use href="#arrow"/></svg></a>
     </div>
     <div class="petals" aria-hidden="true">
@@ -365,8 +470,8 @@
         <span class="link-arrow">Acerca de Bilden <svg class="arrow"><use href="#arrow"/></svg></span>
       </div>
       <div class="reveal d1">
-        <h2 class="h-section">Arquitectura</h2>
-        <p class="lead">En bilden.studio integramos la visión arquitectónica con las necesidades de cada cliente. Diseñamos, planeamos y construimos con control de tiempos, costos y calidad, pensando siempre en las personas que habitarán cada espacio.</p>
+        <h2 class="h-section">Estudio de arquitectura en Bogotá</h2>
+        <p class="lead">En bilden.studio integramos la visión arquitectónica con las necesidades de cada cliente. Diseñamos y construimos oficinas corporativas, espacios de salud y vivienda, con control de tiempos, costos y calidad, pensando siempre en las personas que habitarán cada espacio.</p>
       </div>
     </div>
 
@@ -379,6 +484,28 @@
       <span class="eyebrow">Nuestra experiencia</span>
       <svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg>
     </div>
+  </div>
+</section>
+
+<!-- ===== Servicios ===== -->
+<section class="pad" id="servicios" style="padding-top:0">
+  <div class="wrap">
+    <div class="split">
+      <div class="label-col reveal">
+        <span class="link-arrow">Servicios <svg class="arrow"><use href="#arrow"/></svg></span>
+      </div>
+      <div class="reveal d1">
+        <h2 class="h-section">Diseño y construcción</h2>
+        <p class="lead">Un solo equipo desde la primera idea hasta la entrega de obra.</p>
+      </div>
+    </div>
+    <ol class="services">
+      <li class="reveal"><span class="n">01</span><h3>Diseño arquitectónico</h3><p>Concepto, anteproyecto, planos técnicos y acompañamiento en licencias para proyectos nuevos y de intervención.</p></li>
+      <li class="reveal d1"><span class="n">02</span><h3>Construcción y dirección de obra</h3><p>Ejecución con control de tiempos, costos y presupuesto, y coordinación de cada etapa constructiva.</p></li>
+      <li class="reveal d2"><span class="n">03</span><h3>Diseño y remodelación de oficinas</h3><p>Oficinas corporativas pensadas para el bienestar y la productividad de los equipos, llave en mano.</p></li>
+      <li class="reveal"><span class="n">04</span><h3>Espacios de salud</h3><p>Adecuación de clínicas y consultorios con flujos, áreas y requisitos sanitarios propios del sector.</p></li>
+      <li class="reveal d1"><span class="n">05</span><h3>Vivienda y casas campestres</h3><p>Casas que se abren al paisaje, en Bogotá, la Sabana y Boyacá.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -411,7 +538,7 @@
       </header>
 
       <figure class="feature reveal">
-        <img class="zoom" src="img/proyectos/piso6-02.jpg" alt="Oficina Golden Clear, recepción bajo el cielo reticular de madera" loading="lazy">
+        <img class="zoom" src="img/proyectos/piso6-02-1600.webp" srcset="img/proyectos/piso6-02-800.webp 800w, img/proyectos/piso6-02-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/piso6-02-1600.webp" alt="Oficina Golden Clear, recepción bajo el cielo reticular de madera" loading="lazy">
         <div class="feature-stats">
           <div class="stat"><b>900</b><span>m²</span></div>
           <div class="stat"><span class="tag">Remodelación integral</span></div>
@@ -429,9 +556,9 @@
       </div>
 
       <div class="mosaic">
-        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/piso6-01.jpg" alt="Golden Clear, circulación con cielo reticular" loading="lazy"></figure>
-        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/piso6-05.jpg" alt="Golden Clear, volumen gráfico en blanco y amarillo" loading="lazy"></figure>
-        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/piso6-08.jpg" alt="Golden Clear, sala de juntas en vidrio" loading="lazy"></figure>
+        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/piso6-01-1600.webp" srcset="img/proyectos/piso6-01-800.webp 800w, img/proyectos/piso6-01-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/piso6-01-1600.webp" alt="Golden Clear, circulación con cielo reticular" loading="lazy"></figure>
+        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/piso6-05-1600.webp" srcset="img/proyectos/piso6-05-800.webp 800w, img/proyectos/piso6-05-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/piso6-05-1600.webp" alt="Golden Clear, volumen gráfico en blanco y amarillo" loading="lazy"></figure>
+        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/piso6-08-1600.webp" srcset="img/proyectos/piso6-08-800.webp 800w, img/proyectos/piso6-08-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/piso6-08-1600.webp" alt="Golden Clear, sala de juntas en vidrio" loading="lazy"></figure>
       </div>
 
       <div class="text-cols reveal">
@@ -441,9 +568,9 @@
       <p class="closing reveal">Un resultado que equilibra diseño, técnica y propósito.</p>
 
       <div class="gallery">
-        <figure class="reveal"><img class="zoom" src="img/proyectos/piso6-03.jpg" alt="Golden Clear, puesto de recepción" loading="lazy"></figure>
-        <figure class="reveal d1"><img class="zoom" src="img/proyectos/piso6-07.jpg" alt="Golden Clear, zona de trabajo abierta" loading="lazy"></figure>
-        <figure class="reveal d2"><img class="zoom" src="img/proyectos/piso6-10.jpg" alt="Golden Clear, zona social" loading="lazy"></figure>
+        <figure class="reveal"><img class="zoom" src="img/proyectos/piso6-03-1600.webp" srcset="img/proyectos/piso6-03-800.webp 800w, img/proyectos/piso6-03-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso6-03-1600.webp" alt="Golden Clear, puesto de recepción" loading="lazy"></figure>
+        <figure class="reveal d1"><img class="zoom" src="img/proyectos/piso6-07-1600.webp" srcset="img/proyectos/piso6-07-800.webp 800w, img/proyectos/piso6-07-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso6-07-1600.webp" alt="Golden Clear, zona de trabajo abierta" loading="lazy"></figure>
+        <figure class="reveal d2"><img class="zoom" src="img/proyectos/piso6-10-1600.webp" srcset="img/proyectos/piso6-10-800.webp 800w, img/proyectos/piso6-10-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso6-10-1600.webp" alt="Golden Clear, zona social" loading="lazy"></figure>
       </div>
     </article>
 
@@ -455,7 +582,7 @@
       </header>
 
       <figure class="feature reveal">
-        <img class="zoom" src="img/proyectos/piso11-07.jpg" alt="Oficina Pay Cash, celosía de listones de madera" loading="lazy">
+        <img class="zoom" src="img/proyectos/piso11-07-1600.webp" srcset="img/proyectos/piso11-07-800.webp 800w, img/proyectos/piso11-07-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/piso11-07-1600.webp" alt="Oficina Pay Cash, celosía de listones de madera" loading="lazy">
         <div class="feature-stats">
           <div class="stat"><b>900</b><span>m²</span></div>
           <div class="stat"><span class="tag">En tiempo y presupuesto</span></div>
@@ -473,9 +600,9 @@
       </div>
 
       <div class="mosaic flip">
-        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/piso11-06.jpg" alt="Pay Cash, gradería de madera bajo cielo ondulado" loading="lazy"></figure>
-        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/piso11-05.jpg" alt="Pay Cash, pasillo curvo con listones" loading="lazy"></figure>
-        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/piso11-08.jpg" alt="Pay Cash, recepción con mural" loading="lazy"></figure>
+        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/piso11-06-1600.webp" srcset="img/proyectos/piso11-06-800.webp 800w, img/proyectos/piso11-06-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1440" height="1920" data-full="img/proyectos/piso11-06-1600.webp" alt="Pay Cash, gradería de madera bajo cielo ondulado" loading="lazy"></figure>
+        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/piso11-05-1600.webp" srcset="img/proyectos/piso11-05-800.webp 800w, img/proyectos/piso11-05-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/piso11-05-1600.webp" alt="Pay Cash, pasillo curvo con listones" loading="lazy"></figure>
+        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/piso11-08-1600.webp" srcset="img/proyectos/piso11-08-800.webp 800w, img/proyectos/piso11-08-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/piso11-08-1600.webp" alt="Pay Cash, recepción con mural" loading="lazy"></figure>
       </div>
 
       <div class="text-cols reveal">
@@ -485,9 +612,9 @@
       <p class="closing reveal">Un equilibrio entre resultados y propósito.</p>
 
       <div class="gallery">
-        <figure class="reveal"><img class="zoom" src="img/proyectos/piso11-01.jpg" alt="Pay Cash, recepción" loading="lazy"></figure>
-        <figure class="reveal d1"><img class="zoom" src="img/proyectos/piso11-02.jpg" alt="Pay Cash, sala de reuniones circular" loading="lazy"></figure>
-        <figure class="reveal d2"><img class="zoom" src="img/proyectos/piso11-04.jpg" alt="Pay Cash, zona de espera" loading="lazy"></figure>
+        <figure class="reveal"><img class="zoom" src="img/proyectos/piso11-01-1600.webp" srcset="img/proyectos/piso11-01-800.webp 800w, img/proyectos/piso11-01-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso11-01-1600.webp" alt="Pay Cash, recepción" loading="lazy"></figure>
+        <figure class="reveal d1"><img class="zoom" src="img/proyectos/piso11-02-1600.webp" srcset="img/proyectos/piso11-02-800.webp 800w, img/proyectos/piso11-02-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso11-02-1600.webp" alt="Pay Cash, sala de reuniones circular" loading="lazy"></figure>
+        <figure class="reveal d2"><img class="zoom" src="img/proyectos/piso11-04-1600.webp" srcset="img/proyectos/piso11-04-800.webp 800w, img/proyectos/piso11-04-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso11-04-1600.webp" alt="Pay Cash, zona de espera" loading="lazy"></figure>
       </div>
     </article>
 
@@ -499,8 +626,8 @@
       </header>
 
       <div class="compare">
-        <figure class="reveal"><img class="zoom" src="img/proyectos/medsport-01.jpg" alt="Clínica Medsport, fachada antes de la intervención" loading="lazy"><figcaption class="eyebrow">Antes</figcaption></figure>
-        <figure class="reveal d1"><img class="zoom" src="img/proyectos/medsport-03.jpg" alt="Clínica Medsport, fachada renovada" loading="lazy"><figcaption class="eyebrow">Después</figcaption></figure>
+        <figure class="reveal"><img class="zoom" src="img/proyectos/medsport-01-1600.webp" srcset="img/proyectos/medsport-01-800.webp 800w, img/proyectos/medsport-01-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/medsport-01-1600.webp" alt="Clínica Medsport, fachada antes de la intervención" loading="lazy"><figcaption class="eyebrow">Antes</figcaption></figure>
+        <figure class="reveal d1"><img class="zoom" src="img/proyectos/medsport-03-1600.webp" srcset="img/proyectos/medsport-03-800.webp 800w, img/proyectos/medsport-03-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/medsport-03-1600.webp" alt="Clínica Medsport, fachada renovada" loading="lazy"><figcaption class="eyebrow">Después</figcaption></figure>
       </div>
 
       <div class="facts">
@@ -524,7 +651,7 @@
   <!-- 04 · Casa Jenesano (texto provisional, no está en el documento) -->
   <article class="project" id="jenesano">
     <figure class="bleed reveal">
-      <img class="zoom" src="img/proyectos/jenesano-01.jpg" alt="Casa Jenesano, fachada principal entre jardines y montañas" loading="lazy">
+      <img class="zoom" src="img/proyectos/jenesano-01-1600.webp" srcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-01-1600.webp" alt="Casa Jenesano, fachada principal entre jardines y montañas" loading="lazy">
       <figcaption class="wrap">
         <span class="eyebrow">04 — Vivienda</span>
         <h3>Casa Jenesano</h3>
@@ -542,17 +669,17 @@
       </div>
 
       <div class="mosaic">
-        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/jenesano-int-02.jpg" alt="Casa Jenesano, ventana circular sobre muro de piedra" loading="lazy"></figure>
-        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/jenesano-03.jpg" alt="Casa Jenesano, volumen de piedra con óculo" loading="lazy"></figure>
-        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-01.jpg" alt="Casa Jenesano, sala con vista al valle" loading="lazy"></figure>
+        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/jenesano-int-02-1600.webp" srcset="img/proyectos/jenesano-int-02-800.webp 800w, img/proyectos/jenesano-int-02-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1018" data-full="img/proyectos/jenesano-int-02-1600.webp" alt="Casa Jenesano, ventana circular sobre muro de piedra" loading="lazy"></figure>
+        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/jenesano-03-1600.webp" srcset="img/proyectos/jenesano-03-800.webp 800w, img/proyectos/jenesano-03-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/jenesano-03-1600.webp" alt="Casa Jenesano, volumen de piedra con óculo" loading="lazy"></figure>
+        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-01-1600.webp" srcset="img/proyectos/jenesano-int-01-800.webp 800w, img/proyectos/jenesano-int-01-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-01-1600.webp" alt="Casa Jenesano, sala con vista al valle" loading="lazy"></figure>
       </div>
 
       <div class="gallery">
-        <figure class="reveal"><img class="zoom" src="img/proyectos/jenesano-int-03.jpg" alt="Casa Jenesano, comedor bajo techo de madera" loading="lazy"></figure>
-        <figure class="reveal d1"><img class="zoom" src="img/proyectos/jenesano-04.jpg" alt="Casa Jenesano, acceso con pérgola de acero" loading="lazy"></figure>
-        <figure class="reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-07.jpg" alt="Casa Jenesano, escalera de madera y acero" loading="lazy"></figure>
+        <figure class="reveal"><img class="zoom" src="img/proyectos/jenesano-int-03-1600.webp" srcset="img/proyectos/jenesano-int-03-800.webp 800w, img/proyectos/jenesano-int-03-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-03-1600.webp" alt="Casa Jenesano, comedor bajo techo de madera" loading="lazy"></figure>
+        <figure class="reveal d1"><img class="zoom" src="img/proyectos/jenesano-04-1600.webp" srcset="img/proyectos/jenesano-04-800.webp 800w, img/proyectos/jenesano-04-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/jenesano-04-1600.webp" alt="Casa Jenesano, acceso con pérgola de acero" loading="lazy"></figure>
+        <figure class="reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-07-1600.webp" srcset="img/proyectos/jenesano-int-07-800.webp 800w, img/proyectos/jenesano-int-07-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-07-1600.webp" alt="Casa Jenesano, escalera de madera y acero" loading="lazy"></figure>
       </div>
-      <figure class="wide reveal"><img class="zoom" src="img/proyectos/jenesano-02.jpg" alt="Casa Jenesano, vista aérea" loading="lazy"></figure>
+      <figure class="wide reveal"><img class="zoom" src="img/proyectos/jenesano-02-1600.webp" srcset="img/proyectos/jenesano-02-800.webp 800w, img/proyectos/jenesano-02-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-02-1600.webp" alt="Casa Jenesano, vista aérea" loading="lazy"></figure>
     </div>
   </article>
 
@@ -592,7 +719,7 @@
 <!-- ===== Cotiza ===== -->
 <section id="cotiza">
   <div class="band">
-    <img src="img/proyectos/piso6-01.jpg" alt="" loading="lazy">
+    <img src="img/proyectos/piso6-01-1600.webp" srcset="img/proyectos/piso6-01-800.webp 800w, img/proyectos/piso6-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/piso6-01-1600.webp" alt="" loading="lazy">
     <div class="wrap">
       <div>
         <p class="eyebrow">Bilden Studio — Cotizador</p>
@@ -743,7 +870,7 @@
   // Ampliar imágenes
   const lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img');
   document.querySelectorAll('.zoom').forEach(img => img.addEventListener('click', () => {
-    lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt; lb.classList.add('on');
+    lbImg.src = img.dataset.full || img.currentSrc || img.src; lbImg.alt = img.alt; lb.classList.add('on');
   }));
   lb.addEventListener('click', () => lb.classList.remove('on'));
   addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
