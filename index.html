@@ -264,7 +264,7 @@
   .compare figure:first-child img{filter:grayscale(1) contrast(.95)}
   .compare figcaption{position:absolute;left:18px;bottom:16px;color:#fff;background:rgba(30,30,28,.45);padding:6px 12px;backdrop-filter:blur(6px)}
   .wide{margin:clamp(12px,2vw,28px) 0 0;overflow:hidden}
-  .wide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 85%}
+  .wide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 50%}
   .pp{background:var(--olive);color:var(--paper);padding-block:clamp(90px,10vw,150px);margin-top:clamp(120px,13vw,190px)}
   .pp .project-head{border-color:var(--paper)}
   .pp-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(40px,6vw,96px);margin-top:48px}
@@ -279,6 +279,7 @@
   .lightbox.on{display:flex}
   .lightbox img{max-width:100%;max-height:100%;object-fit:contain}
   .gallery img{aspect-ratio:4/5}
+  .gallery.two{grid-template-columns:repeat(2,1fr)}
 
   /* ---------- frase ---------- */
   .quote{text-align:center}
@@ -392,6 +393,7 @@
     .gallery{grid-template-columns:1fr 1fr}
     .services{grid-template-columns:1fr}
     .gallery figure:nth-child(3){display:none}
+    .gallery.two{grid-template-columns:1fr 1fr}
     .compare{grid-template-columns:1fr}
     .results{grid-template-columns:1fr}
     .band .tiles-ghost{display:none}
@@ -551,17 +553,16 @@
       </div>
 
       <div class="mosaic">
-        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/jenesano-int-02-1600.webp" srcset="img/proyectos/jenesano-int-02-800.webp 800w, img/proyectos/jenesano-int-02-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1018" data-full="img/proyectos/jenesano-int-02-1600.webp" alt="Casa Jenesano, ventana circular sobre muro de piedra" loading="lazy"></figure>
-        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/jenesano-03-1600.webp" srcset="img/proyectos/jenesano-03-800.webp 800w, img/proyectos/jenesano-03-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1200" data-full="img/proyectos/jenesano-03-1600.webp" alt="Casa Jenesano, volumen de piedra con óculo" loading="lazy"></figure>
-        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-01-1600.webp" srcset="img/proyectos/jenesano-int-01-800.webp 800w, img/proyectos/jenesano-int-01-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-01-1600.webp" alt="Casa Jenesano, sala con vista al valle" loading="lazy"></figure>
+        <figure class="m-a reveal"><img class="zoom" src="img/proyectos/jenesano-sala-1600.webp" srcset="img/proyectos/jenesano-sala-800.webp 800w, img/proyectos/jenesano-sala-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="2400" data-full="img/proyectos/jenesano-sala-1600.webp" alt="Casa Jenesano, sala bajo techo de madera abierta a la terraza" loading="lazy"></figure>
+        <figure class="m-b reveal d1"><img class="zoom" src="img/proyectos/jenesano-terraza-1600.webp" srcset="img/proyectos/jenesano-terraza-800.webp 800w, img/proyectos/jenesano-terraza-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1059" data-full="img/proyectos/jenesano-terraza-1600.webp" alt="Casa Jenesano, terraza con pérgola integrada a la sala" loading="lazy"></figure>
+        <figure class="m-c reveal d2"><img class="zoom" src="img/proyectos/jenesano-estar-1600.webp" srcset="img/proyectos/jenesano-estar-800.webp 800w, img/proyectos/jenesano-estar-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1067" data-full="img/proyectos/jenesano-estar-1600.webp" alt="Casa Jenesano, estar con ventanales hacia las montañas" loading="lazy"></figure>
       </div>
 
-      <div class="gallery">
-        <figure class="reveal"><img class="zoom" src="img/proyectos/jenesano-int-03-1600.webp" srcset="img/proyectos/jenesano-int-03-800.webp 800w, img/proyectos/jenesano-int-03-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-03-1600.webp" alt="Casa Jenesano, comedor bajo techo de madera" loading="lazy"></figure>
-        <figure class="reveal d1"><img class="zoom" src="img/proyectos/jenesano-04-1600.webp" srcset="img/proyectos/jenesano-04-800.webp 800w, img/proyectos/jenesano-04-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/jenesano-04-1600.webp" alt="Casa Jenesano, acceso con pérgola de acero" loading="lazy"></figure>
-        <figure class="reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-07-1600.webp" srcset="img/proyectos/jenesano-int-07-800.webp 800w, img/proyectos/jenesano-int-07-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-07-1600.webp" alt="Casa Jenesano, escalera de madera y acero" loading="lazy"></figure>
+      <div class="gallery two">
+        <figure class="reveal"><img class="zoom" src="img/proyectos/jenesano-chimenea-1600.webp" srcset="img/proyectos/jenesano-chimenea-800.webp 800w, img/proyectos/jenesano-chimenea-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 50vw" width="1600" height="2400" data-full="img/proyectos/jenesano-chimenea-1600.webp" alt="Casa Jenesano, chimenea exenta y biblioteca" loading="lazy"></figure>
+        <figure class="reveal d1"><img class="zoom" src="img/proyectos/jenesano-pasillo-1600.webp" srcset="img/proyectos/jenesano-pasillo-800.webp 800w, img/proyectos/jenesano-pasillo-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 50vw" width="1600" height="2400" data-full="img/proyectos/jenesano-pasillo-1600.webp" alt="Casa Jenesano, pasillo curvo con ventana circular" loading="lazy"></figure>
       </div>
-      <figure class="wide reveal"><img class="zoom" src="img/proyectos/jenesano-02-1600.webp" srcset="img/proyectos/jenesano-02-800.webp 800w, img/proyectos/jenesano-02-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-02-1600.webp" alt="Casa Jenesano, vista aérea" loading="lazy"></figure>
+      <figure class="wide reveal"><img class="zoom" src="img/proyectos/jenesano-sala-cocina-1600.webp" srcset="img/proyectos/jenesano-sala-cocina-800.webp 800w, img/proyectos/jenesano-sala-cocina-1600.webp 1600w" sizes="100vw" width="1600" height="1067" data-full="img/proyectos/jenesano-sala-cocina-1600.webp" alt="Casa Jenesano, sala y cocina en un solo espacio abierto al paisaje" loading="lazy"></figure>
     </article>
 
     <!-- 03 · Pay Cash (carpeta PISO 6) -->
