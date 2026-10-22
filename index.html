@@ -228,6 +228,7 @@
   .facts dd{margin:0;font-size:17px;font-weight:500}
 
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,28px);margin-top:clamp(72px,8vw,120px)}
+  .mosaic + .gallery{margin-top:clamp(12px,2vw,28px)}
   .gallery figure{margin:0;overflow:hidden;background:var(--paper-2)}
   .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s var(--ease)}
   .gallery figure:hover img{transform:scale(1.04)}
