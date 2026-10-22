@@ -197,6 +197,7 @@
   .stat{display:flex;align-items:baseline;gap:14px}
   .stat b{font-size:clamp(64px,7.4vw,112px);font-weight:300;line-height:.9;letter-spacing:-.02em;font-variation-settings:"wdth" 100}
   .stat span{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .stat span small{display:block;margin-top:6px;font-size:11px;font-weight:500;letter-spacing:.1em;opacity:.65}
   .stats-foot{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
 
   /* ---------- proyectos ---------- */
@@ -466,8 +467,8 @@
     </div>
 
     <div class="stats reveal">
-      <div class="stat"><b data-count="12">12</b><span>Proyectos</span></div>
-      <div class="stat"><b data-count="3">3</b><span>Sectores</span></div>
+      <div class="stat"><b data-count="20" data-prefix="+">+20</b><span>Proyectos</span></div>
+      <div class="stat"><b data-count="3">3</b><span>Sectores<small>Oficinas · Salud · Vivienda</small></span></div>
       <div class="stat"><b data-count="4">4</b><span>Años</span></div>
     </div>
     <div class="stats-foot reveal">
@@ -842,7 +843,7 @@
   const countIO = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     const el = e.target, end = +el.dataset.count, t0 = performance.now();
-    const step = t => { const p = Math.min((t - t0) / 1400, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
+    const step = t => { const p = Math.min((t - t0) / 1400, 1); el.textContent = (el.dataset.prefix || '') + Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step); countIO.unobserve(el);
   }), {threshold:.6});
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
