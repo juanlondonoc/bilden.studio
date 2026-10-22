@@ -175,8 +175,15 @@
 
   /* ---------- hero ---------- */
   .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;color:var(--white)}
-  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;transform:scale(1.06);animation:heroIn 2.4s var(--ease) forwards}
-  @keyframes heroIn{to{transform:scale(1)}}
+  .hero-slides{position:absolute;inset:0}
+  .hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);
+    transition:opacity 2.2s ease-in-out,transform 0s linear 2.2s}
+  .hero-slides img.is-active{opacity:1;transform:scale(1);transition:opacity 2.2s ease-in-out,transform 9s cubic-bezier(.25,.1,.25,1)}
+  .hero-caption{position:absolute;z-index:2;right:max(32px,calc((100% - 1180px)/2));bottom:30px;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.85)}
+  .hero-caption .eyebrow{font-size:11px;transition:opacity .8s ease}
+  .hero-dots{display:flex;gap:6px}
+  .hero-dots button{width:18px;height:2px;padding:0;border:0;background:rgba(255,255,255,.35);cursor:pointer;transition:background .6s,width .6s}
+  .hero-dots button.is-active{background:#fff;width:32px}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(30,32,26,.55) 0%,rgba(30,32,26,.18) 45%,rgba(30,32,26,0) 70%),linear-gradient(0deg,rgba(30,32,26,.35),transparent 35%),linear-gradient(180deg,rgba(30,32,26,.35),transparent 22%)}
   .hero .wrap{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:space-between;gap:40px}
   .hero h1{margin:0}
@@ -265,7 +272,7 @@
   .bleed figcaption{position:absolute;z-index:2;left:0;right:0;bottom:clamp(28px,4vw,56px);margin-inline:auto}
   .bleed h3{margin:10px 0 0;font-size:clamp(44px,7vw,110px);font-weight:600;text-transform:uppercase;line-height:.95;font-variation-settings:"wdth" 112}
   .wide{margin:clamp(12px,2vw,28px) 0 0;overflow:hidden}
-  .wide img{width:100%;aspect-ratio:21/9;object-fit:cover}
+  .wide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 85%}
   .pp{background:var(--olive);color:var(--paper);padding-block:clamp(90px,10vw,150px);margin-top:clamp(120px,13vw,190px)}
   .pp .project-head{border-color:var(--paper)}
   .pp-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(40px,6vw,96px);margin-top:48px}
@@ -344,7 +351,7 @@
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
     .reveal{opacity:1;transform:none}
-    .hero img{transform:none}.petals span{opacity:1;transform:none}
+    .hero-slides img{transform:none}.petals span{opacity:1;transform:none}
   }
 
   /* ---------- responsive ---------- */
@@ -382,6 +389,9 @@
   @media (max-width:640px){
     :root{--wrap:calc(100% - 32px)}
     body{font-size:16px}
+    .hero-caption{right:16px;bottom:24px}
+    .hero-caption .eyebrow{display:none}
+    .scroll-cue{display:none}
     .hero .wrap{flex-direction:column;justify-content:flex-end;align-items:flex-start;padding-bottom:110px}
     .petals{position:absolute;top:120px;right:0;width:120px;gap:10px}
     .stats{grid-template-columns:1fr;gap:18px}
@@ -448,7 +458,13 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="inicio">
-  <img src="img/proyectos/jenesano-01-1600.webp" srcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-01-1600.webp" alt="Casa Jenesano, casa campestre diseñada y construida por Bilden Studio" fetchpriority="high">
+  <div class="hero-slides" id="heroSlides">
+    <img class="is-active" src="img/proyectos/jenesano-01-1600.webp" srcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Casa Jenesano, casa campestre diseñada y construida por Bilden Studio" style="object-position:center 55%" data-label="Casa Jenesano" fetchpriority="high">
+    <img data-src="img/proyectos/piso11-07-1600.webp" data-srcset="img/proyectos/piso11-07-800.webp 800w, img/proyectos/piso11-07-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Oficina Golden Clear, celosía circular de listones de madera" style="object-position:center 50%" data-label="Oficina Golden Clear">
+    <img data-src="img/proyectos/jenesano-03-1600.webp" data-srcset="img/proyectos/jenesano-03-800.webp 800w, img/proyectos/jenesano-03-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Casa Jenesano, volumen de piedra con ventana circular" style="object-position:center 60%" data-label="Casa Jenesano">
+    <img data-src="img/proyectos/piso6-02-1600.webp" data-srcset="img/proyectos/piso6-02-800.webp 800w, img/proyectos/piso6-02-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Oficina Pay Cash, recepción bajo el cielo reticular de madera" style="object-position:center 45%" data-label="Oficina Pay Cash">
+    <img data-src="img/proyectos/jenesano-int-01-1600.webp" data-srcset="img/proyectos/jenesano-int-01-800.webp 800w, img/proyectos/jenesano-int-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Casa Jenesano, sala abierta al valle" style="object-position:center 55%" data-label="Casa Jenesano">
+  </div>
   <div class="wrap">
     <div>
       <h1 class="eyebrow">Arquitectura, diseño y construcción en Colombia</h1>
@@ -460,6 +476,10 @@
       <span style="animation-delay:.6s"></span><span style="animation-delay:.7s"></span><span style="animation-delay:.8s"></span>
       <span style="animation-delay:.7s"></span><span style="animation-delay:.8s"></span><span style="animation-delay:.9s"></span>
     </div>
+  </div>
+  <div class="hero-caption">
+    <span class="eyebrow" id="heroLabel">Casa Jenesano</span>
+    <div class="hero-dots" id="heroDots"></div>
   </div>
   <div class="scroll-cue" aria-hidden="true"></div>
 </section>
@@ -845,6 +865,34 @@
     toggle.setAttribute('aria-expanded', open);
   });
   document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  // Carrusel del hero: desvanecido sutil entre proyectos
+  (() => {
+    const slides = [...document.querySelectorAll('#heroSlides img')];
+    const label = document.getElementById('heroLabel'), dots = document.getElementById('heroDots');
+    if (slides.length < 2) return;
+    let i = 0, timer;
+    const load = img => { if (img.dataset.src) { img.srcset = img.dataset.srcset; img.src = img.dataset.src; delete img.dataset.src; } };
+    slides.forEach((_, k) => {
+      const b = document.createElement('button');
+      b.setAttribute('aria-label', 'Imagen ' + (k + 1));
+      b.addEventListener('click', () => { go(k); start(); });
+      dots.appendChild(b);
+    });
+    const go = k => {
+      load(slides[k]);
+      slides[i].classList.remove('is-active'); dots.children[i].classList.remove('is-active');
+      i = k;
+      slides[i].classList.add('is-active'); dots.children[i].classList.add('is-active');
+      label.style.opacity = 0;
+      setTimeout(() => { label.textContent = slides[i].dataset.label; label.style.opacity = 1; }, 500);
+      load(slides[(i + 1) % slides.length]);
+    };
+    dots.children[0].classList.add('is-active');
+    const start = () => { clearInterval(timer); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go((i + 1) % slides.length), 6500); };
+    addEventListener('load', () => { load(slides[1]); start(); });
+    document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(timer) : start());
+  })();
 
   // Aparición suave
   const io = new IntersectionObserver(es => es.forEach(e => {
