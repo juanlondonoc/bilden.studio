@@ -263,11 +263,6 @@
   .compare img{width:100%;aspect-ratio:4/3;object-fit:cover}
   .compare figure:first-child img{filter:grayscale(1) contrast(.95)}
   .compare figcaption{position:absolute;left:18px;bottom:16px;color:#fff;background:rgba(30,30,28,.45);padding:6px 12px;backdrop-filter:blur(6px)}
-  .bleed{position:relative;margin:0;height:min(100svh,920px);overflow:hidden;color:var(--white)}
-  .bleed img{width:100%;height:100%;object-fit:cover}
-  .bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,26,22,.6),transparent 45%);pointer-events:none}
-  .bleed figcaption{position:absolute;z-index:2;left:0;right:0;bottom:clamp(28px,4vw,56px);margin-inline:auto}
-  .bleed h3{margin:10px 0 0;font-size:clamp(44px,7vw,110px);font-weight:600;text-transform:uppercase;line-height:.95;font-variation-settings:"wdth" 112}
   .wide{margin:clamp(12px,2vw,28px) 0 0;overflow:hidden}
   .wide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 85%}
   .pp{background:var(--olive);color:var(--paper);padding-block:clamp(90px,10vw,150px);margin-top:clamp(120px,13vw,190px)}
@@ -398,7 +393,6 @@
     .services{grid-template-columns:1fr}
     .gallery figure:nth-child(3){display:none}
     .compare{grid-template-columns:1fr}
-    .bleed{height:80svh}
     .results{grid-template-columns:1fr}
     .band .tiles-ghost{display:none}
     .foot{grid-template-columns:1fr}
@@ -530,18 +524,22 @@
         <figure class="reveal d2"><img class="zoom" src="img/proyectos/piso11-04-1600.webp" srcset="img/proyectos/piso11-04-800.webp 800w, img/proyectos/piso11-04-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1200" data-full="img/proyectos/piso11-04-1600.webp" alt="Golden Clear, zona de espera" loading="lazy"></figure>
       </div>
     </article>
-  </div>
 
-  <!-- 02 · Casa Jenesano (texto provisional, no está en el documento) -->
-  <article class="project" id="jenesano">
-    <figure class="bleed reveal">
-      <img class="zoom" src="img/proyectos/jenesano-01-1600.webp" srcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-01-1600.webp" alt="Casa Jenesano, fachada principal entre jardines y montañas" loading="lazy">
-      <figcaption class="wrap">
-        <span class="eyebrow">02 — Vivienda</span>
+    <!-- 02 · Casa Jenesano (texto provisional, no está en el documento) -->
+    <article class="project" id="jenesano">
+      <header class="project-head reveal">
         <h3>Casa Jenesano</h3>
-      </figcaption>
-    </figure>
-    <div class="wrap">
+        <span class="eyebrow muted">02 — Vivienda</span>
+      </header>
+
+      <figure class="feature reveal">
+        <img class="zoom" src="img/proyectos/jenesano-01-1600.webp" srcset="img/proyectos/jenesano-01-800.webp 800w, img/proyectos/jenesano-01-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-01-1600.webp" alt="Casa Jenesano, fachada principal entre jardines y montañas" loading="lazy">
+        <div class="feature-stats">
+          <div class="stat"><span class="tag">Vivienda campestre</span></div>
+          <div class="stat"><span class="tag">Jenesano, Boyacá</span></div>
+        </div>
+      </figure>
+
       <div class="facts">
         <p class="lead reveal">Una casa de campo en las montañas de Boyacá que se abre al paisaje: piedra, madera y grandes ventanales para vivir hacia afuera.</p>
         <dl class="reveal d1">
@@ -564,10 +562,8 @@
         <figure class="reveal d2"><img class="zoom" src="img/proyectos/jenesano-int-07-1600.webp" srcset="img/proyectos/jenesano-int-07-800.webp 800w, img/proyectos/jenesano-int-07-1600.webp 1600w" sizes="(max-width: 640px) 50vw, 33vw" width="1600" height="1066" data-full="img/proyectos/jenesano-int-07-1600.webp" alt="Casa Jenesano, escalera de madera y acero" loading="lazy"></figure>
       </div>
       <figure class="wide reveal"><img class="zoom" src="img/proyectos/jenesano-02-1600.webp" srcset="img/proyectos/jenesano-02-800.webp 800w, img/proyectos/jenesano-02-1600.webp 1600w" sizes="100vw" width="1600" height="1200" data-full="img/proyectos/jenesano-02-1600.webp" alt="Casa Jenesano, vista aérea" loading="lazy"></figure>
-    </div>
-  </article>
+    </article>
 
-  <div class="wrap">
     <!-- 03 · Pay Cash (carpeta PISO 6) -->
     <article class="project" id="pay-cash">
       <header class="project-head reveal">
